@@ -1,8 +1,10 @@
 html {
     box-sizing: border-box;
     font-size: $fontsizebase;
-    color: $cl-body-font-color;
-    background-color: $cl-body-background;
+    color: $cl-text;
+    background-color: $cl-primary;
+    background-image: url(../img/polka-dots.svg);
+    background-size: 5px;
 
     @include breakpoint($bp-tablet) {
         font-size: $fontsizebase*1.1428571429;
@@ -25,7 +27,9 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    font-family: $fontfira;
+    background-image: inherit;
+    background-size: inherit;
+    font-family: $fontbody;
     font-weight: $fw-normal;
     line-height: $global-lineheight;
     font-feature-settings: "lnum" 1;

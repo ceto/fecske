@@ -1,0 +1,90 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family: $fontheading;
+    font-weight: $fw-bold;
+    line-height: 1.2;
+    margin: 0 0 .75rem;
+    letter-spacing: 0.02em;
+}
+
+ul,ol {
+    margin:0;
+    padding:0;
+}
+
+p {
+    margin:0 0 1em;
+}
+
+a {
+    color: inherit;
+    &:hover, &:focus {
+        // color: $color-blue;
+    }
+}
+
+
+
+svg.icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+.button {
+    font-family: $fontheading;
+    font-weight: $fw-bold;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none; 
+    padding:.75em .75em;
+    border-radius: .333em;
+    letter-spacing: 0.02em;
+    background-color: $cl-text;
+    color: $cl-accent;
+
+    .icon {
+        margin:0 .25em 0 .875em;
+        font-size: .75em;
+        transform: scale(2);
+        // display: none;
+    }
+
+    &:hover, &:focus {
+        background-color: $cl-secondary;
+        color: $cl-text; 
+    }
+
+    &.accent {
+        background-color: $cl-accent;
+        color: $cl-text;
+        &:hover, &:focus {
+            background-color: $cl-secondary;
+            color: $cl-text; 
+        }
+    }
+
+    &.primary {
+        background-color: $cl-primary-light;
+        color: $cl-text;
+        &:hover, &:focus {
+            background-color: $cl-secondary;
+            color: $cl-text; 
+        }
+    }
+
+    &.secondary {
+        background-color: $cl-secondary;
+        color: $cl-text;
+        &:hover, &:focus {
+            background-color: $cl-accent;
+            color: $cl-text; 
+        }
+    }
+
+    &.large {
+        font-size: 1.333rem;
+    }
+    &.small {
+        font-size: .875rem;
+    }
+}
