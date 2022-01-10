@@ -1,0 +1,98 @@
+html {
+    box-sizing: border-box;
+    font-size: $fontsizebase;
+    color: $cl-body-font-color;
+    background-color: $cl-body-background;
+
+    @include breakpoint($bp-tablet) {
+        font-size: $fontsizebase*1.1428571429;
+    }
+    @include breakpoint($bp-xxlarge) {
+        font-size: $fontsizebase*1.25;
+    }
+}
+
+
+
+// Set box-sizing globally to handle padding and border widths
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: $fontfira;
+    font-weight: $fw-normal;
+    line-height: $global-lineheight;
+    font-feature-settings: "lnum" 1;
+    -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+    -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
+
+
+    &.is-frozen {
+        overflow: hidden;
+    }
+}
+
+
+
+
+
+
+img {
+    // Get rid of gap under images by making them display: inline-block; by default
+    display: inline-block;
+    vertical-align: middle;
+
+    // Grid defaults to get images and embeds to work properly
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+    image-rendering: -webkit-optimize-contrast;
+  }
+
+
+  .chartfig {
+      width:100%;
+    // margin:0;
+    // padding:1em 1.5em;
+    // background-color: $cl-gray-xlight;
+
+    img {
+        max-width: none;
+        width:100%;
+    }
+  }
+
+.cc-window {
+    font-size:.75rem;
+    background-color: #fff;
+    box-shadow: 0 0 .75rem 0 rgba(#000,.025);
+    transition: opacity 1s ease;
+    transition-delay: 2700ms;
+
+    &.cc-invisible {
+        transition-delay: 200ms;
+    }
+}
+.cc-window.cc-floating {
+
+    padding: .875em 1.25em;
+    max-width: 25em;
+
+    @media screen and (max-width: 414px) and (orientation: portrait), screen and (max-width: 736px) and (orientation: landscape) {
+        max-width: none;
+    }
+}
+
+
+.cc-floating .cc-message {
+    margin-bottom: .5em;
+}
+.cc-link {
+    display: inline;
+}
