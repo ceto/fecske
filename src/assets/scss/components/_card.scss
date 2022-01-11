@@ -1,0 +1,104 @@
+.card {
+    background-color: $cl-text;
+    color: $cl-accent;
+    padding:3rem 10% 7rem 10%;
+    height:100%;
+    position: relative;
+
+    &.secondary {
+        background-color: $cl-secondary-2;
+        color: $cl-text;
+
+    }
+    &.accent {
+        background-color: $cl-accent;
+        color: $cl-text;
+
+    }
+}
+
+
+.card__fig {
+    margin:0 -12.5%; 
+    padding:0;
+    height: 0;
+    padding-bottom: 75%;
+    position: relative;
+
+    img {
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.card__meta {
+    position: relative;
+    margin-top:-.75rem;
+
+}
+.card__title {
+    margin:0 0 .25em 0;
+    font-size: 1.875rem;
+    text-align: center;
+    min-height: 2.5em;
+    text-transform: uppercase;
+    a {
+        text-decoration: none;
+        &:hover, &:focus {
+            color: $cl-primary;
+            // color:$white;
+        }
+    }
+
+}
+
+.card__excerpt {
+    font-size: .875rem;
+    margin-bottom:1rem;
+
+}
+
+.card__actions  {
+    position: absolute;
+
+    left:10%;
+    right:10%;
+    bottom:3rem;
+    text-align: center;
+
+    .button {
+        font-size: 1.25rem;
+        margin:0;
+    }
+}
+
+.cardgrid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr));
+    grid-column-gap: rem-calc($layout-gutter-width * 1);
+    grid-row-gap: rem-calc($layout-gutter-width * 1);
+    grid-auto-rows: 1fr;
+
+
+    > li {
+        // background-color: $cl-primary;
+        // background-color: $cl-gray-xlight;
+        // padding:1rem;
+        // color: #fff;
+        // color: $cl-body-font-color;
+    }
+
+    &.onlythree {
+        > li:nth-child(n + 4) {
+            display: none;
+        }
+
+    }
+}
