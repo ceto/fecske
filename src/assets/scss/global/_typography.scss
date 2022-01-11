@@ -6,6 +6,16 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 0.02em;
 }
 
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+
 ul,ol {
     margin:0;
     padding:0;
@@ -36,22 +46,28 @@ svg.icon {
     line-height: 1;
     display: inline-block;
     text-decoration: none; 
-    padding:.75em .75em;
+    padding:.75em .75em .666em;
     border-radius: .333em;
     letter-spacing: 0.02em;
     background-color: $cl-text;
     color: $cl-accent;
+    text-align: center;
+    // min-width: 8em;
 
     .icon {
         margin:0 .25em 0 .875em;
         font-size: .75em;
         transform: scale(2);
+        fill: $cl-secondary;
         // display: none;
     }
 
     &:hover, &:focus {
         background-color: $cl-secondary;
         color: $cl-text; 
+        .icon {
+            fill: $cl-text;
+        }
     }
 
     &.accent {
@@ -75,6 +91,9 @@ svg.icon {
     &.secondary {
         background-color: $cl-secondary;
         color: $cl-text;
+        .icon {
+            fill: $cl-text;
+        }
         &:hover, &:focus {
             background-color: $cl-accent;
             color: $cl-text; 
@@ -83,8 +102,30 @@ svg.icon {
 
     &.large {
         font-size: 1.333rem;
+        padding:.666em .875em .5em;
     }
     &.small {
         font-size: .875rem;
     }
+}
+
+
+.bodycopy {
+    ul:not(.swipegallery):not(.slick-dots):not(.tabalikemenu){
+        @include niceul;
+    }
+    ol {
+        @include niceol;
+    }
+
+    p {
+        margin: 0 0 1em 0;
+    }
+
+    a:not(.button) {
+        text-decoration: underline;
+        text-decoration-color: $cl-tertiary;
+    }
+
+
 }
