@@ -25,13 +25,30 @@ p {
     margin:0 0 1em;
 }
 
-a {
+a:not(.button) {
     color: inherit;
+    text-decoration: underline;
+    text-decoration-color: $cl-secondary-2;
     &:hover, &:focus {
-        // color: $color-blue;
+        text-decoration-color: $cl-secondary;
     }
 }
 
+.accentcopy {
+    font-size: 1.125rem;
+
+    &.narrow {
+        max-width: 50rem;
+    }
+
+    ul {
+        @include niceul;
+    }
+
+    ol {
+        @include niceol;
+    }
+}
 
 
 svg.icon {

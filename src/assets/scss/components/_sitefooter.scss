@@ -1,0 +1,23 @@
+.sitefooter {
+    @extend .pagewrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: $cl-secondary-2;
+    background-image: url(../img/polka-dots.svg);
+    background-size: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem_calc($layout-gutter-width);
+    @include breakpoint($bp-large) {
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+}
+
+.sitefooter__logo {
+    flex-basis: 6rem;
+}
+
+.siteheader__center{
+}

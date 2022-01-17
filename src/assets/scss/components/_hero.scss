@@ -6,6 +6,7 @@
 }
 
 .hero__content {
+    @extend .pagewrap;
     margin-bottom:10%;
 }
 .hero__title {
