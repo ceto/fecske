@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import whatInput from 'what-input';
+import 'slick-carousel';
 import AOS from 'aos';
 
 // Foundation JS relies on a global variable. In ES6, all imports are hoisted
@@ -18,5 +19,39 @@ import './lib/foundation-explicit-pieces';
 $(document).foundation();
 
 AOS.init({
+
+});
+
+
+const $cardswiper = $('.cardswiper');
+$cardswiper
+    .slick({
+        mobileFirst: true,
+        arrows: false,
+        dots: true,
+        // prevArrow: '<button type="button" class="slick-prev"><svg class="icon"><use xlink:href="#icon-caret-left"></use></svg></button>',
+        // nextArrow: '<button type="button" class="slick-next"><svg class="icon"><use xlink:href="#icon-caret-right"></use></svg></button>',
+        // appendArrows: '.carouselwrap',
+        infinite: false,
+        slidesToShow: 1,
+        // adaptiveHeight:true,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    dots: true,
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 1280,
+                settings: {
+                    dots: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            }
+        ]
 
 });

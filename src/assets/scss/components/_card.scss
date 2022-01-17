@@ -19,7 +19,7 @@
 
 
 .card__fig {
-    margin:0 -12.5%; 
+    margin:-3rem -12.5% 3rem; 
     padding:0;
     height: 0;
     padding-bottom: 75%;
@@ -49,7 +49,8 @@
     a {
         text-decoration: none;
         &:hover, &:focus {
-            color: $cl-primary;
+            text-decoration: underline;
+            // color: $cl-primary;
             // color:$white;
         }
     }

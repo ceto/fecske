@@ -1,4 +1,4 @@
-.postswiper {
+.cardswiper {
     margin-top: rem-calc($layout-gutter-width*1.5);
     width:92.5%;
     @include breakpoint($bp-medium) {
@@ -9,9 +9,9 @@
     }
 
 
-    &.slick-dotted.slick-slider {
-        margin-bottom: rem-calc($layout-gutter-width);
-    }
+    // &.slick-dotted.slick-slider {
+    //     margin-bottom: rem-calc($layout-gutter-width);
+    // }
     .slick-slide {
         margin: 0 rem-calc($layout-gutter-width/4);
 
@@ -37,18 +37,19 @@
         // background-color: red;
     }
     .slick-dots {
-        position: absolute;
-        bottom: rem-calc(-$layout-gutter-width*2);
-        text-align: left;
+        
+        // position: absolute;
+        // bottom: rem-calc(-$layout-gutter-width*2);
+        // text-align: left;
         @include breakpoint($bp-large) {
-            text-align: center;
+           justify-content: center;
         }
     }
 
     .card {
-        min-height: 35rem;
+        min-height: 38rem;
         @include breakpoint($bp-xlarge) {
-            min-height: 34rem;
+            // min-height: 34rem;
         }
     }
 }
