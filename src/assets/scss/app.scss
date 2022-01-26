@@ -40,7 +40,7 @@
 // @include foundation-accordion;
 // @include foundation-media-object;
 // @include foundation-orbit;
-// @include foundation-responsive-embed;
+@include foundation-responsive-embed;
 // @include foundation-tabs;
 // @include foundation-thumbnail;
 
@@ -53,7 +53,7 @@
 
 // Layout components
 // @include foundation-off-canvas;
-// @include foundation-reveal;
+@include foundation-reveal;
 // @include foundation-sticky;
 // @include foundation-title-bar;
 // @include foundation-top-bar;
@@ -65,8 +65,8 @@
 // @include foundation-prototype-classes;
 
 // Motion UI
-// @include motion-ui-transitions;
-// @include motion-ui-animations;
+@include motion-ui-transitions;
+@include motion-ui-animations;
 
 
 @import 'node_modules/slick-carousel/slick/slick.scss';
@@ -82,6 +82,7 @@
 @import 'components/siteheader';
 @import 'components/sitefooter';
 @import 'components/slick-theme';
+@import 'components/modals';
 
 
 

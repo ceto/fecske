@@ -1,0 +1,47 @@
+.revealclose {
+
+}
+
+.lettermodal {
+    // display: flex;
+    @include reveal-modal-fullscreen;
+    display: flex;
+    
+    color: $cl-text;
+    background-color: $cl-primary;
+    // background-image: url(../img/polka-dots.svg);
+    // background-size: 5px;
+    background-image: url(../img/polka-dots.svg), url(../img/content/borito.jpg);
+    background-size: 5px, cover;
+    background-repeat: repeat, no-repeat;
+    background-position: center;
+    background-blend-mode: normal, overlay;
+
+    .responsive-embed {
+        box-shadow: 0 0 4rem 0 rgba(#000,.85);
+        margin:0;
+        // border: 10px solid red;
+    }
+}
+
+.lettermodal__inner {
+    @extend .pagewrap;
+    max-height: 100%;
+    overflow: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.lettermodal__close {
+    position: absolute;
+    z-index: 1;
+    right:3%;
+    top:3%;
+    font-size: 2rem;
+    color: inherit;
+    // fill: currentColor;
+    &:hover, &:focus {
+        color: $cl-secondary;
+    }
+}

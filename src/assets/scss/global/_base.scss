@@ -6,7 +6,7 @@ html {
     background-image: url(../img/polka-dots.svg);
     background-size: 5px;
 
-    @include breakpoint($bp-tablet) {
+    @include breakpoint($bp-xlarge) {
         font-size: $fontsizebase*1.1428571429;
     }
     @include breakpoint($bp-xxlarge) {

@@ -2,6 +2,7 @@ import $ from 'jquery';
 import whatInput from 'what-input';
 import 'slick-carousel';
 import AOS from 'aos';
+import YTPlayer from 'yt-player';
 
 // Foundation JS relies on a global variable. In ES6, all imports are hoisted
 // to the top of the file so if we used `import` to import Foundation,
@@ -14,6 +15,8 @@ import AOS from 'aos';
 // If you want to pick and choose which modules to include, comment out the above and uncomment
 // the line below
 import './lib/foundation-explicit-pieces';
+
+
 
 
 $(document).foundation();
@@ -55,3 +58,12 @@ $cardswiper
         ]
 
 });
+
+
+const player = new YTPlayer('#themodalplayer')
+player.load('pxs6wcX889o')
+player.setVolume(100)
+
+player.on('playing', () => {
+  console.log(player.getDuration()) // => 351.521
+})

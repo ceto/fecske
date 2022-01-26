@@ -1,5 +1,5 @@
 <div class="hero">
-    <img class="hero__bg" src="{{root}}assets/img/borito.jpg" alt="Apa mikor jön haza?">
+    <img class="hero__bg" src="{{root}}assets/img/content/borito.jpg" alt="Apa mikor jön haza?">
     <div class="hero__content">
         <h2 class="hero__title text-center">Apa mikor jön</h2>
         <h2 class="hero__title text-right"><span>haza?</span></h2>
@@ -25,12 +25,12 @@
         <p>Gyermeke, unokája, anyja, apja, párja - volt börtönben, vagy ők maguk járták meg a börtönt. A történetek az életükről szólnak, amiben egy ideig jelen volt a börtön valósága, ami elszakította őket szeretteiktől.</p>
         <p>A  saját, személyes megéléseiket osztják meg velünk. Azt, hogy mi volt a legnehezebb az egymástól távol töltött időben, hogyan tudtak kommunikálni és hogyan érintette ez az időszak a kapcsolataikat. Mennyiben lehetetlenítette el a minőségi kapcsolattartást, hogy a világjárvány miatt több, mint egy éven át nem láthatták személyesen a szeretteiket.</p>
         <p>
-            <a href="#" class="button">Megnézem a videót!<svg class="icon"><use xlink:href="#icon-play"></use></svg></a>&nbsp;
+            <button data-open="video-one-modal" class="button">Megnézem a videót!<svg class="icon"><use xlink:href="#icon-play"></use></svg></button>&nbsp;
             <a href="#" class="button accent">Teljes sztori itt<svg class="icon"><use xlink:href="#icon-openlink"></use></svg></a>
         </p>
     </div>
     <div class="mpt__bg">
-            <img src="https://source.unsplash.com/1600x1200/?prison" alt="">
+            <img src="{{root}}/assets/img/content/0112_I.jpg" alt="">
     </div>
 </section>
 
@@ -41,12 +41,12 @@
         <p>Gyermeke, unokája, anyja, apja, párja - volt börtönben, vagy ők maguk járták meg a börtönt. A történetek az életükről szólnak, amiben egy ideig jelen volt a börtön valósága, ami elszakította őket szeretteiktől.</p>
         <p>A  saját, személyes megéléseiket osztják meg velünk. Azt, hogy mi volt a legnehezebb az egymástól távol töltött időben, hogyan tudtak kommunikálni és hogyan érintette ez az időszak a kapcsolataikat. Mennyiben lehetetlenítette el a minőségi kapcsolattartást, hogy a világjárvány miatt több, mint egy éven át nem láthatták személyesen a szeretteiket.</p>
         <p>
-            <a href="#" class="button">Megnézem a videót!<svg class="icon"><use xlink:href="#icon-play"></use></svg></a>&nbsp;
+            <button data-open="video-one-modal" class="button">Megnézem a videót!<svg class="icon"><use xlink:href="#icon-play"></use></svg></button>&nbsp;
             <a href="#" class="button accent">Teljes sztori itt<svg class="icon"><use xlink:href="#icon-openlink"></use></svg></a>
         </p>
     </div>
     <div class="mpt__bg">
-            <img src="https://source.unsplash.com/1600x1200/?prison" alt="">
+        <img src="{{root}}/assets/img/content/0111_I.jpg" alt="">
     </div>
 </section>
 
@@ -58,14 +58,26 @@
         <p>Gyermeke, unokája, anyja, apja, párja - volt börtönben, vagy ők maguk járták meg a börtönt. A történetek az életükről szólnak, amiben egy ideig jelen volt a börtön valósága, ami elszakította őket szeretteiktől.</p>
         <p>A  saját, személyes megéléseiket osztják meg velünk. Azt, hogy mi volt a legnehezebb az egymástól távol töltött időben, hogyan tudtak kommunikálni és hogyan érintette ez az időszak a kapcsolataikat. Mennyiben lehetetlenítette el a minőségi kapcsolattartást, hogy a világjárvány miatt több, mint egy éven át nem láthatták személyesen a szeretteiket. 
         </p>
-        <a href="#" class="button secondary">Simple Iconized Button<svg class="icon"><use xlink:href="#icon-play"></use></svg></a>
+        <button data-open="video-one-modal" class="button secondary">Simple Iconized Button<svg class="icon"><use xlink:href="#icon-play"></use></svg></button>
     </div>
     <div class="mpt__bg">
-            <img src="https://source.unsplash.com/1600x1280/?prison,arrested" alt="">
+        <img src="{{root}}/assets/img/content/0111_II.jpg" alt="">
     </div>
 </section>
+
+<div class="lettermodal" id="video-one-modal" data-reveal data-animation-in="fade-in fast" data-animation-out="fade-out fast">
+    <div class="lettermodal__inner">
+        <div class="responsive-embed widescreen">
+            <div id="themodalplayer"></div>
+        </div>
+    </div>
+    <button class="lettermodal__close" data-close aria-label="Felugró bezárása" type="button">
+        <span aria-hidden="true"><svg class="icon"><use xlink:href="#icon-close"></use></svg></span>
+    </button>
+</div>
+
 <div class="pagewrap megabg">
-    <h4>Élet a rácsok mögött</h2>
+    <h4>Élet a rácsok mögött</h4>
     <br>
     <div class="narrowwrap">
         <div class="grid-x grid-margin-x grid-margin-y">
@@ -111,15 +123,13 @@
         <div>
             <article class="card card--short">
                 <h3 class="card__title">
-                    <a href="#">
                         Mária levele férjének a börtönbe
-                    </a>
                 </h3>
                 <div class="card__excerpt">
                     <p>Tempore corporis exercitationem dolore magnam porro nobis ab magni pariatur error at, dolorum odit? Architecto.</p>
                 </div>
                 <div class="card__actions">
-                    <a href="#" class="button accent">Elolvasom!</a>
+                    <button data-open="letter-one-modal" class="button accent">Elolvasom!</button>
                 </div>
             </article>
         </div>
@@ -132,7 +142,7 @@
                     <p>Dolor sit amet consectetur, adipisicing elit. Tempore corporis exercitationem dolore magnam porro nobis ab magni pariatur error at, dolorum odit? Architecto.</p>
                 </div>
                 <div class="card__actions">
-                    <a href="#" class="button">Elolvasom!</a>
+                    <button data-open="letter-one-modal" class="button">Elolvasom!</button>
                 </div>
             </article>
         </div>
@@ -145,7 +155,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore corporis exercitationem dolore magnam porro nobis ab magni pariatur error at, dolorum odit? Architecto.</p>
                 </div>
                 <div class="card__actions">
-                    <a href="#" class="button">Elolvasom!</a>
+                    <button data-open="letter-one-modal" class="button">Elolvasom!</button>
                 </div>
             </article>
         </div>
@@ -158,13 +168,27 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore corporis exercitationem dolore magnam porro nobis ab magni pariatur error at, dolorum odit? Architecto.</p>
                 </div>
                 <div class="card__actions">
-                    <a href="#" class="button accent">Elolvasom!</a>
+                    <button data-open="letter-one-modal" class="button accent">Elolvasom!</button>
                 </div>
             </article>
         </div>
     </section>
 </div>
+<div class="lettermodal" id="letter-one-modal" data-reveal data-animation-in="fade-in fast" data-animation-out="fade-out fast">
+    <div class="lettermodal__inner">
+        <div class="narrowwrap accentcopy">
+            <h3>Amet consectetur adipisicing elit</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis ab maxime quisquam reiciendis repellendus illo, provident quia quae in sapiente officia commodi nisi deserunt temporibus sequi placeat. Accusamus quidem, aperiam ab ipsam aliquam exercitationem est. Veniam veritatis inventore id modi eum nostrum aliquam labore consequatur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima amet assumenda ad delectus nesciunt voluptatum, rerum veritatis laboriosam corrupti repudiandae provident natus necessitatibus.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis ab maxime quisquam reiciendis repellendus illo, provident quia quae in sapiente officia commodi nisi deserunt temporibus sequi placeat. Accusamus quidem, aperiam ab ipsam aliquam exercitationem est. Veniam veritatis inventore id modi eum nostrum aliquam labore consequatur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima amet assumenda ad delectus nesciunt voluptatum, rerum veritatis laboriosam corrupti repudiandae provident natus necessitatibus.</p>
 
+        </div>
+    </div>
+    <button class="lettermodal__close" data-close aria-label="Felugró bezárása" type="button">
+        <span aria-hidden="true"><svg class="icon"><use xlink:href="#icon-close"></use></svg></span>
+    </button>
+</div>
 
 <section class="mpt awide">
     <div class="mpt__content ">
@@ -175,7 +199,7 @@
     </div>
     <div class="mpt__media">
         <figure class="mpt__fig">
-            <img src="{{root}}assets/img/borito.jpg" alt="">
+            <img src="{{root}}assets/img/content/borito.jpg" alt="">
         </figure>
     </div>
 </section>
@@ -183,7 +207,4 @@
 
 
 <div class="pagewrap">
-    <div class="accentcopy narrowwrap">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, blanditiis dolore itaque atque, deserunt molestias vel saepe numquam laudantium eum minus unde cumque accusantium illo doloribus facilis? Rem reiciendis ut nam obcaecati quis beatae iusto, itaque eligendi sapiente! Soluta, culpa.</p>
-    </div>
 </div>

@@ -104,11 +104,17 @@
     }
     &.megabg {
         background-color: #ad3610;
-        background-image: url(../img/megafon.jpg);
-        background-size: 20rem auto;
-        background-repeat: no-repeat;
+        // background-image: url(../img/megafon.jpg);
+        // background-size: 20rem auto;
+        // background-repeat: no-repeat;
+        // background-position: center;
+        // background-blend-mode:luminosity;
+
+        background-image: url(../img/polka-dots.svg), url(../img/megafon.jpg);
+        background-size: 5px, 20rem auto;
+        background-repeat: repeat, no-repeat;
         background-position: center;
-        background-blend-mode:luminosity;
+        background-blend-mode: normal, luminosity;
     }
 }
 
