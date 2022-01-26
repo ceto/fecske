@@ -25,12 +25,43 @@ p {
     margin:0 0 1em;
 }
 
+blockquote {
+    font-style: italic;
+    // opacity: .875;
+    // font-family: $fontornament;
+    font-size: 1rem;
+    margin:0 0 1.5em;
+    cite {
+        font-family: $fontheading;
+        margin-top:.333em;
+        font-style: normal;
+        font-size:.87.5%;
+    }
+}
+
 a:not(.button) {
     color: inherit;
     text-decoration: underline;
     text-decoration-color: $cl-secondary-2;
     &:hover, &:focus {
         text-decoration-color: $cl-secondary;
+    }
+}
+
+
+hr {
+    margin: 1rem auto;
+    max-width: rem-calc($layout-content);
+    height: 0;
+    border: none;
+    border-top: 2px solid rgba(#000, 0.25);
+    border-bottom: 2px solid rgba(#fff, 0.25);
+
+    &.fulldivider {
+        max-width: none;
+        // margin: 0 auto;
+        border-top: 2px solid rgba(#000, 0.05);
+        border-bottom: 2px solid rgba(#fff, 0.05);
     }
 }
 
@@ -127,6 +158,10 @@ svg.icon {
     }
     &.small {
         font-size: .875rem;
+    }
+    &.tiny {
+        font-size: .75rem;
+        padding:.75em .75em .666em;
     }
 }
 

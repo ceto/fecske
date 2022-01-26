@@ -46,10 +46,14 @@
         }
     }
 
-    .card {
-        min-height: 38rem;
-        @include breakpoint($bp-xlarge) {
-            // min-height: 34rem;
+    .card:not(.card--short) {
+        min-height: 37.5rem;
+        @include breakpoint($bp-large) {
+            min-height: 39rem;
         }
+    }
+
+    .card--short {
+        min-height: 23.5rem;
     }
 }

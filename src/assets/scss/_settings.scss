@@ -129,8 +129,8 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
-  medium: 30px,
+  small: rem-calc($layout-gutter-width),
+  medium: rem-calc($layout-gutter-width),
 );
 $grid-column-align-edge: true;
 $grid-column-alias: 'columns';
@@ -187,9 +187,9 @@ $list-nested-side-margin: 1.25rem;
 $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
-$blockquote-color: $dark-gray;
-$blockquote-padding: rem-calc(9 20 0 19);
-$blockquote-border: 1px solid $medium-gray;
+$blockquote-color: inherit;
+$blockquote-padding: 0 0;
+$blockquote-border: 0px solid transparent;
 $enable-cite-block: true;
 $keystroke-font: $font-family-monospace;
 $keystroke-color: $black;
@@ -209,8 +209,8 @@ $subheader-font-weight: $global-weight-normal;
 $subheader-margin-top: 0.2rem;
 $subheader-margin-bottom: 0.5rem;
 $stat-font-size: 2.5rem;
-$cite-color: $dark-gray;
-$cite-font-size: rem-calc(13);
+$cite-color: inherit;
+$cite-font-size: rem-calc(14);
 $cite-pseudo-content: '\2014 \0020';
 $code-color: $black;
 $code-font-family: $font-family-monospace;

@@ -93,8 +93,14 @@
         min-height: calc(100vh - #{$siteheader-height});
     }
 
-    &.xlight {
-        background-color: $cl-gray-xlight;
+    &.light {
+        background-color: $cl-text;
+        color: $cl-accent;
+    }
+    &.secondary {
+        background-color: $cl-secondary-2;
+        background-image: url(../img/polka-dots.svg);
+        background-size: 5px;
     }
 }
 
