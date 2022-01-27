@@ -31,6 +31,7 @@ blockquote {
     // font-family: $fontornament;
     font-size: 1rem;
     margin:0 0 1.5em;
+    break-inside: avoid;
     cite {
         font-family: $fontheading;
         margin-top:.333em;
@@ -84,6 +85,13 @@ hr {
     }
 }
 
+.twocolcopy {
+    gap: rem-calc($layout-gutter-width*2);
+
+    @include breakpoint($bp-tablet) {
+        columns: 2;break-inside: avoid;
+    }
+}
 
 svg.icon {
     width: 1em;

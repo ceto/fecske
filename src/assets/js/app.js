@@ -59,7 +59,6 @@ $cardswiper
 
 });
 
-
 var player = new YTPlayer('#themodalplayer', {
     // controls: false,
     modestBranding: true,
