@@ -60,10 +60,31 @@ $cardswiper
 });
 
 
-const player = new YTPlayer('#themodalplayer')
-player.load('pxs6wcX889o')
-player.setVolume(100)
-
-player.on('playing', () => {
-  console.log(player.getDuration()) // => 351.521
+var player = new YTPlayer('#themodalplayer', {
+    // controls: false,
+    modestBranding: true,
+    related: false
 })
+
+// player.setVolume(100)
+
+// player.on('playing', () => {
+//   console.log(player.getDuration()) // => 351.521
+// })
+
+var $thevideomodal = new Foundation.Reveal($('#thevideomodal'), {
+    animationIn: 'fade-in fast',
+    animationOut: 'fade-out fast',
+    fullScreen: true
+});
+
+$('#thevideomodal').on('closed.zf.reveal', function() {
+    player.stop();
+});
+
+$('[data-youtubemodal]').on('click', function(e){
+    var $this=$(this);
+    player.load($this.attr('data-youtubemodal'), 'start');
+    $thevideomodal.open();
+
+});

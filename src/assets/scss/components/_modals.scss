@@ -4,9 +4,12 @@
 
 .lettermodal {
     // display: flex;
+    @include reveal-modal-base;
+    padding:0;
     @include reveal-modal-fullscreen;
+  
+    position: fixed;
     display: flex;
-    
     color: $cl-text;
     background-color: $cl-primary;
     // background-image: url(../img/polka-dots.svg);
@@ -20,6 +23,7 @@
     .responsive-embed {
         box-shadow: 0 0 4rem 0 rgba(#000,.85);
         margin:0;
+        background-color: #000;
         // border: 10px solid red;
     }
 }
