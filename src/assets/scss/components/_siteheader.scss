@@ -1,23 +1,56 @@
 .siteheader {
     @extend .pagewrap;
     overflow: visible;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;;
     padding-top: 0;
     padding-bottom: 0;
-    background-color: $cl-text;
-    color: $cl-accent;
+    color: $cl-text;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: rem_calc($layout-gutter-width);
+    @include breakpoint($bp-tablet) {
+        padding-top: calc(.5rem + .25vw);
+        padding-bottom: calc(.5rem + .25vw);
+        
+    }
     @include breakpoint($bp-large) {
         padding-left: 7.5%;
         padding-right: 7.5%;
     }
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        left:0;
+        top:0;
+        width: 100%;
+        height:150%;
+        background-image: linear-gradient(to bottom, rgba(#000, .5) 1rem, transparent 100%);
+    }
 }
 
+
+
 .siteheader__logo {
-    width: 3rem;
-    padding:.333rem 0;
+
+    display: block;
+    width: #{2.78rem * 1};
+    height: #{2.64rem * 1};
+    margin:.5rem 0;
+    @include breakpoint($bp-tablet) {
+        width: #{2.78rem * 1.25};
+        height: #{2.64rem * 1.25};
+    }
+
+    svg {
+        width:100%;
+        height:100%;
+        // fill: $cl-primary-light;
+    }
 
 }
 
@@ -49,7 +82,7 @@
             padding:.25em .5em;
             text-decoration: none;
             &:hover, &:focus {
-                color: $cl-primary;
+                color: $cl-secondary;
             }
         }
 
