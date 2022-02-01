@@ -58,10 +58,13 @@
 
     font-family: $fontheading;
     font-weight: $fw-bold;
-    font-size: 1.333rem;
+    font-size: 1.125rem;
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+    @include breakpoint($bp-medium) {
+        font-size: 1.333rem;
+    }
     ul {
         display: flex;
         list-style: none;
@@ -69,11 +72,35 @@
         padding: 0;
 
         ul {
-            // display: none;
+            display: block;
+            opacity: 0;
+            visibility: hidden;
             position: absolute;
+            margin-left: .5em;
+            min-width: 8em;
             background-color: $cl-tertiary;
             flex-direction: column;
             padding: .5em 0;
+            transition: opacity .4s ease-in;
+            box-shadow: 0 0 .5em 0 rgba(#000,.5);
+            &:hover {
+                visibility: visible;
+                opacity: 1; 
+            }
+            &:before {
+                position: absolute;
+                // z-index: -1;
+                transform: rotate(-45deg);
+                transform-origin: left top;
+                top:0;
+                left:.5em;
+                content: '';
+                display: block;
+                width: .5em;
+                height: .5em;
+                background-color: inherit;
+                box-shadow: 0 -.5em .25em 0 rgba(#000,.5);
+            }
         }
     }
     li {
@@ -81,9 +108,33 @@
             display: block;
             padding:.25em .5em;
             text-decoration: none;
+            &.dropdown {
+                padding-right: .125em;
+                &:after {
+                    margin-left: .2em;
+                    content: '';
+                    display: inline-block;
+                    width: .5em;
+                    height: .666em;
+                    background-image: svg-load('dropdown.svg', fill=$cl-text);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    // background-color: red;
+                }
+            }
             &:hover, &:focus {
                 color: $cl-secondary;
+                &.dropdown:after {
+                    background-image: svg-load('dropdown.svg', fill=$cl-secondary);
+                }
+
+                + ul {
+                    // display: block;
+                    visibility: visible;
+                    opacity: 1;
+                }
             }
+            
         }
 
         li {
@@ -91,6 +142,9 @@
             a {
                 padding:.125em .5em;
                 color: $cl-secondary;
+                &:hover, &:focus {
+                    color: $cl-primary;
+                }
             }
         }
         
@@ -98,3 +152,4 @@
 
 
 }
+

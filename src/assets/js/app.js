@@ -87,3 +87,7 @@ $('[data-youtubemodal]').on('click', function(e){
     $thevideomodal.open();
 
 });
+
+$('.dropdown').on('click', function(event){
+    event.preventDefault();
+});

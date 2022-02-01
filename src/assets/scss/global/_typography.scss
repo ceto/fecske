@@ -159,6 +159,26 @@ svg.icon {
         }
     }
 
+    &.faux {
+        background-color: transparent;
+        border:1px solid currentColor;
+        color: $cl-text;
+        .icon {
+            fill: currentColor;
+        }
+        &:hover, &:focus {
+            color: #fff; 
+        }
+
+        &.accent {
+            color: $cl-accent;
+            &:hover, &:focus {
+                color: #000; 
+                background-color: transparent;
+            }
+        }
+    }
+
     &.large {
         font-size: 1.333rem;
         padding:.666em .875em .5em;
