@@ -137,4 +137,19 @@
     }
 }
 
+.narrowwrap__floatingtitle {
+    color: $cl-secondary;
+
+    @include breakpoint($bp-xxlarge) {
+        position: absolute;
+        margin-left: -14rem;
+        width:14rem;
+        padding-right: 2rem;
+        padding-top:.25rem;
+        font-size: 1.666rem;
+        text-align: right;
+
+    }
+}
+
 

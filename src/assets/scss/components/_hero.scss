@@ -1,34 +1,42 @@
 .hero {
+    @extend .pagewrap;
+    background-color: $cl-primary;
     position: relative;
     min-height: 56.25vw;
     display: flex;
     align-items: center;
+
 }
 
 .hero__content {
-    @extend .pagewrap;
-    max-width:  #{$global-width*0.875};
-    // margin-bottom:5%;
+    // @extend .narrowwrap;
+    flex-basis: 100%;
+    margin-bottom:5%;
 }
 .hero__title {
     font-family: $fontornament;
-    font-weight: $fw-bold;
-    font-size: calc(2rem + 5vw);
-    letter-spacing: 0.07em;
+    font-weight: $fw-normal;
+    font-size: calc(1.25rem + 4vw);
+    text-shadow: 0 0 .25em rgba(#000,.85);
+    // letter-spacing: -0.02em;
     margin:0;
     span {
         color: $cl-secondary;
     }
 }
 
+
 .hero__bg {
     position: absolute;
+    z-index: -1;
     display: block;
     top:0;
     left:0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 95%;
+    object-position: center 120%;
+    // mix-blend-mode: luminosity;
+    
 
 }

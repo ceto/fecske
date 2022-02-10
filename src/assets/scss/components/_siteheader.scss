@@ -38,18 +38,19 @@
 .siteheader__logo {
 
     display: block;
-    width: #{2.78rem * 1};
-    height: #{2.64rem * 1};
+    width: #{3.88rem * 1.666};
+    height: #{1.76rem * 1.666};
     margin:.5rem 0;
+    filter: drop-shadow(0 0 .25rem rgba(#000,.85));
     @include breakpoint($bp-tablet) {
-        width: #{2.78rem * 1.25};
-        height: #{2.64rem * 1.25};
+        width: #{3.88rem * 2.666};
+        height: #{1.76rem * 2.666};
     }
 
     svg {
         width:100%;
         height:100%;
-        // fill: $cl-primary-light;
+        fill: $cl-text;
     }
 
 }
@@ -58,12 +59,12 @@
 
     font-family: $fontheading;
     font-weight: $fw-bold;
-    font-size: 1.125rem;
+    font-size: 1.0875rem;
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     @include breakpoint($bp-medium) {
-        font-size: 1.333rem;
+        font-size: 1.5rem;
     }
     ul {
         display: flex;
@@ -109,7 +110,7 @@
             padding:.25em .5em;
             text-decoration: none;
             &.dropdown {
-                padding-right: .125em;
+                padding-right: .25em;
                 &:after {
                     margin-left: .2em;
                     content: '';
