@@ -101,11 +101,12 @@ svg.icon {
 
 .button {
     font-family: $fontheading;
-    font-weight: $fw-bold;
+    font-weight: $fw-normal;
+    font-size: 1.25em;
     line-height: 1;
     display: inline-block;
     text-decoration: none; 
-    padding:.75em .75em .666em;
+    padding:.5em .666em .4em;
     border-radius: .333em;
     letter-spacing: 0.02em;
     background-color: $cl-text;
@@ -114,8 +115,8 @@ svg.icon {
     // min-width: 8em;
 
     .icon {
-        margin:0 .25em 0 .875em;
-        font-size: .75em;
+        margin:0 .125em 0 .875em;
+        font-size: .666em;
         transform: scale(2);
         fill: $cl-secondary;
         // display: none;

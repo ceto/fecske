@@ -139,6 +139,9 @@
 
 .narrowwrap__floatingtitle {
     color: $cl-secondary;
+    font-family: $fontsubheading;
+    font-weight: normal;
+    letter-spacing: normal;
 
     @include breakpoint($bp-xxlarge) {
         position: absolute;

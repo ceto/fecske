@@ -43,9 +43,12 @@
 .card__title {
     margin:0 0 .25em 0;
     font-size: 1.875rem;
-    text-align: center;
+    // text-align: center;
     min-height: 2.5em;
-    text-transform: uppercase;
+    letter-spacing: normal;
+    // text-transform: uppercase;
+    font-weight: normal;
+    font-family: $fontsubheading;
     a {
         text-decoration: none;
         &:hover, &:focus {
@@ -69,7 +72,7 @@
     left:10%;
     right:10%;
     bottom:3rem;
-    text-align: center;
+    // text-align: center;
 
     .button {
         font-size: 1.25rem;
