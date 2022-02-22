@@ -4,7 +4,7 @@ html {
     color: $cl-text;
     background-color: $cl-primary;
     background-image: url(../img/polka-dots.svg);
-    background-size: 5px;
+    background-size: $polkadotsize;
 
     @include breakpoint($bp-xlarge) {
         font-size: $fontsizebase*1.1428571429;
@@ -14,6 +14,11 @@ html {
     }
 }
 
+
+
+html.is-reveal-open.zf-has-scroll {
+    overflow-y: hidden;
+}
 
 
 // Set box-sizing globally to handle padding and border widths

@@ -13,7 +13,7 @@
     color: $cl-text;
     background-color: $cl-primary;
     background-image: url(../img/polka-dots.svg), url(../img/content/oleles.jpg);
-    background-size: 5px, cover;
+    background-size: $polkadotsize, cover;
     background-repeat: repeat, no-repeat;
     background-position: center;
     background-blend-mode: normal, overlay;

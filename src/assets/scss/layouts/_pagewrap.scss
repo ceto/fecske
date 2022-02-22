@@ -105,7 +105,7 @@
     &.megabg {
         background-color: #ad3610;
         background-image: url(../img/polka-dots.svg), url(../img/megafon.jpg);
-        background-size: 5px, 20rem auto;
+        background-size: $polkadotsize, 20rem auto;
         background-repeat: repeat, no-repeat;
         background-position: center;
         background-blend-mode: normal, luminosity;
@@ -113,7 +113,7 @@
     &.coverbg {
         background-color: $cl-primary;
         background-image: url(../img/polka-dots.svg), url(../img/content/borito.jpg);
-        background-size: 5px, cover;
+        background-size: $polkadotsize, cover;
         background-repeat: repeat, no-repeat;
         background-position: center;
         background-blend-mode: normal, overlay;
@@ -127,6 +127,18 @@
 
 .narrowwrap {
     max-width:  #{$global-width*0.75};
+    margin-left:auto;
+    margin-right:auto;
+    &.left {
+        margin-left: 0;;
+    }
+    &.right {
+        margin-right: 0;
+    }
+}
+
+.xnarrowwrap {
+    max-width:  #{$global-width*0.5};
     margin-left:auto;
     margin-right:auto;
     &.left {

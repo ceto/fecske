@@ -1,9 +1,16 @@
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3 {
     font-family: $fontheading;
     font-weight: $fw-bold;
     line-height: 1.2;
     margin: 0 0 .75rem;
     letter-spacing: 0.02em;
+}
+
+h4,h5,h6 {
+    font-family: $fontsubheading;
+    font-weight: $fw-normal;
+    line-height: 1.2;
+    margin: 0 0 .75rem;
 }
 
 h1 {
@@ -16,6 +23,10 @@ h3 {
     font-size: 1.5rem;
 }
 
+h4,h5,h6 {
+    font-size: 1.25rem;
+}
+
 ul,ol {
     margin:0;
     padding:0;
@@ -26,17 +37,18 @@ p {
 }
 
 blockquote {
-    font-style: italic;
+    // font-style: italic;
     // opacity: .875;
     // font-family: $fontornament;
-    font-size: 1rem;
+    font-size: .9375rem;
     margin:0 0 1.5em;
     break-inside: avoid;
     cite {
-        font-family: $fontheading;
+        font-family: $fontsubheading;
+        font-weight: normal;
         margin-top:.333em;
         font-style: normal;
-        font-size:.87.5%;
+        // font-size:.93.75%;
     }
 }
 
@@ -63,10 +75,23 @@ hr {
         // margin: 0 auto;
 
     }
+
+    &.piheno {
+        border: none;
+        height: 4rem;
+        margin-top:0;
+        margin-bottom:0;
+        background-image: svg-load('foursbullets.svg', fill=$cl-secondary-2);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: auto 66.666%;
+    }
 }
 
 .sectitle {
-    font-size: 3rem;
+    font-size: 2.125rem;
+    line-height: 1;
+    margin-bottom: 0;
 }
 
 .accentcopy {
@@ -102,17 +127,20 @@ svg.icon {
 .button {
     font-family: $fontheading;
     font-weight: $fw-normal;
-    font-size: 1.25em;
+    font-size: 1.125em;
     line-height: 1;
     display: inline-block;
     text-decoration: none; 
-    padding:.5em .666em .4em;
+    padding:.5em .666em .333em;
     border-radius: .333em;
     letter-spacing: 0.02em;
     background-color: $cl-text;
     color: $cl-accent;
     text-align: center;
     // min-width: 8em;
+    &.expanded {
+        width:100%;
+    }
 
     .icon {
         margin:0 .125em 0 .875em;
@@ -182,7 +210,7 @@ svg.icon {
 
     &.large {
         font-size: 1.333rem;
-        padding:.666em .875em .5em;
+        // padding:.666em .875em .5em;
     }
     &.small {
         font-size: .875rem;
