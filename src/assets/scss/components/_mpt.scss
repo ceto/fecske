@@ -8,6 +8,8 @@
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    border-top:1px solid rgba(#fff, .025);
+    border-bottom:1px solid rgba(#fff, .025);
 
 
     @include breakpoint($bp-tablet) {
@@ -64,7 +66,10 @@
         font-family: $fontsubheading;
         letter-spacing: normal;
         font-weight: normal;
-        font-size: 2.25em;
+        font-size: 2.5em;
+        @include breakpoint($bp-tablet down) {
+            font-size: 2.25rem;
+        }
     }
 
     h4,h5,h6 {
@@ -106,6 +111,10 @@
             padding-left: 8.75%;
             padding-right: 8.75%;
             font-size: 1.25rem;
+
+            @include breakpoint($bp-tablet down) {
+                font-size: 1.125rem;
+            }
             
             &:last-child {
                 text-align: center;
@@ -280,15 +289,22 @@
 
 
 .mptlist {
+    margin-top:6rem;
+    > .mpt {
+        border: none;
+    }
+
     > .mpt:not(:last-child) {
         @include breakpoint($bp-tablet) {
-            margin-bottom:8rem;
+            margin-bottom:6rem;
         }
         
         // border-bottom:1px solid rgba(#fff, .05);
     }
+
+
     
-    @include breakpoint($bp-tablet) {
-        margin-bottom:8rem;
+    @include breakpoint($bp-large) {
+        margin-bottom:6rem;
     }
 }

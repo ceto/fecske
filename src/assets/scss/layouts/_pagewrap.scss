@@ -6,8 +6,8 @@
     margin:0 auto;
     padding-left: 3%;
     padding-right: 3%;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     width: 100%;
     // background-color: $cl-body-background;
 
@@ -17,6 +17,8 @@
         padding-right: 5%;
     }
     @include breakpoint($bp-large) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
         padding-left: 7.5%;
         padding-right: 7.5%;
     }
