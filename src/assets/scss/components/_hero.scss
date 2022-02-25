@@ -11,14 +11,19 @@
 .hero__content {
     @extend .narrowwrap;
     flex-basis: 100%;
-    margin-bottom:5%;
+    margin-top:10%;
+    text-align: center;
+    
 }
 .hero__title {
-    font-family: $fontornament;
-    font-weight: 100;
+    font-family: $fontsubheading;
+    font-weight: $fw-normal;
     font-size: calc(1.5rem + 4vw);
     text-shadow: 0 0 .25em rgba(#000,.85);
-    letter-spacing: -0.02em;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+    text-indent: -5em;
+    // text-align: right;
     // letter-spacing: normal;
     margin:0;
     span {
@@ -37,5 +42,5 @@
     height: 100%;
     object-fit: cover;
     object-position: center 120%;
-    mix-blend-mode: luminosity;
+    // mix-blend-mode: luminosity;
 }

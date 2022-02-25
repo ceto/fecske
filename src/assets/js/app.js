@@ -17,8 +17,6 @@ import YTPlayer from 'yt-player';
 import './lib/foundation-explicit-pieces';
 
 
-
-
 $(document).foundation();
 
 AOS.init({
