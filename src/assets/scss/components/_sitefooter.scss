@@ -1,22 +1,41 @@
 .sitefooter {
     @extend .pagewrap;
+    font-size: .875rem;
+    text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
     background-color: $cl-secondary-2;
     background-image: url(../img/polka-dots.svg);
     background-size: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: rem_calc($layout-gutter-width);
+
     @include breakpoint($bp-large) {
         padding-left: 7.5%;
         padding-right: 7.5%;
     }
 }
 
+.sitefooter__center {
+}
 .sitefooter__logo {
-    flex-basis: 6rem;
+    text-align: center;
+    margin:0 auto;
+    // max-width: 12rem;
+    white-space: nowrap;
+    img {
+        display: inline-block;
+        // mix-blend-mode: multiply;
+        // filter:brightness(100)
+        // filter:sepia(.25);
+        opacity: .9;
+        // background-color: #fff;
+        // width: 50%;
+        height: 1.75rem;
+        + img {
+            height: 2.333rem;
+            margin-left: .75rem;
+        }
+        
+    }
    
 }
 

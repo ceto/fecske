@@ -26,13 +26,13 @@ AOS.init({
 
 const $cardswiper = $('.cardswiper');
 $cardswiper
+    .on("init", function (event, slick) {
+        Foundation.reInit('equalizer');
+    })
     .slick({
         mobileFirst: true,
         arrows: false,
         dots: true,
-        // prevArrow: '<button type="button" class="slick-prev"><svg class="icon"><use xlink:href="#icon-caret-left"></use></svg></button>',
-        // nextArrow: '<button type="button" class="slick-next"><svg class="icon"><use xlink:href="#icon-caret-right"></use></svg></button>',
-        // appendArrows: '.carouselwrap',
         infinite: false,
         slidesToShow: 1,
         // adaptiveHeight:true,
