@@ -236,7 +236,11 @@ svg.icon {
 
     a:not(.button) {
         text-decoration: underline;
-        text-decoration-color: $cl-tertiary;
+        text-decoration-color: $cl-secondary;
+        text-decoration-style: dotted;
+        &:hover, &:focus {
+            text-decoration-style: solid;
+        }
     }
 
 
